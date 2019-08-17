@@ -7,6 +7,7 @@
     "build": "ng build",
     "build:prod": "ng build --base-href=/ --prod --build-optimizer=true --vendor-chunk=true --configuration=dev",
     "test": "jest",
+    "clearCache": "jest --clearCache",
     "coverage": "npm test -- --coverage",
     "lint": "ng lint",
     "stylelint": "stylelint 'src/**/*.scss'",
