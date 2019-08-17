@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm i && ng serve --port=4200 --open --configuration=local",
     "build": "ng build",
-    "test": "ng test",
+    "build:prod": "ng build --base-href=/ --prod --build-optimizer=true --vendor-chunk=true --configuration=dev",
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "stylelint": "stylelint 'src/**/*.scss'",
+    "format:check": "prettier --no-semi true --single-quote true --check \"src/app/**/*{.ts,.js,.json,.css,.scss,.html}\"",
+    "format:write": "npm run format:check -- --write",
+    "check": "npm run lint && npm run stylelint && npm run format:check && npm run test"
   },
   "private": true,
   "dependencies": {
