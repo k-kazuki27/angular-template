@@ -4,7 +4,6 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsConfig: '<rootDir>/tsconfig.spec.json',
-      diagnostics: true,
       stringifyContentPathRegex: '\\.html$',
       astTransformers: [
         require.resolve('jest-preset-angular/InlineHtmlStripStylesTransformer')
